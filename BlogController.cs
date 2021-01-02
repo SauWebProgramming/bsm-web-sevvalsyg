@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ISE309_ProjeOdev_B181200028_B181200039.Models.Sınıflar;
+using ISE309_ProjeOdev_B181200039_B181200028.Models.Siniflar;
 
-namespace ISE309_ProjeOdev_B181200028_B181200039.Controllers
+namespace ISE309_ProjeOdev_B181200039_B181200028.Controllers
 {
     public class BlogController : Controller
     {
@@ -16,13 +16,12 @@ namespace ISE309_ProjeOdev_B181200028_B181200039.Controllers
         {
             //var bloglar = c.Blogs.ToList();
             by.Deger1 = c.Blogs.ToList();
-            by.Deger3 = c.Blogs.OrderByDescending(x => x.ID).Take(3).ToList();
+            by.Deger3 = c.Blogs.OrderByDescending(x => x.ID ).Take(3).ToList();
             return View(by);
         }
         
         public ActionResult BlogDetay(int id)
         {
-
             //var blogbul = c.Blogs.Where(x => x.ID == id).ToList();
             by.Deger1 = c.Blogs.Where(x => x.ID == id).ToList();
             by.Deger2 = c.Yorumlars.Where(x => x.Blogid == id).ToList();
@@ -34,7 +33,6 @@ namespace ISE309_ProjeOdev_B181200028_B181200039.Controllers
             ViewBag.deger = id;
             return PartialView();
         }
-
         [HttpPost]
         public PartialViewResult YorumYap(Yorumlar y)
         {
