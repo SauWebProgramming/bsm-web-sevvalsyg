@@ -1,4 +1,5 @@
-﻿@model ISE309_ProjeOdev_B181200039_B181200028.Models.Siniflar.BlogYorum
+﻿@using ISE309_ProjeOdev_B181200039_B181200028.Models.Siniflar
+@model List<Blog>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -12,67 +13,90 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
-<head>
-
-    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!----webfonts---->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
-
-</head>
 <body>
-    <!---header---->
-    <div class="header">
-        <div class="container">
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil & Seyahat Bloğu</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restaurantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak Şeyler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
 
-
-            <div class="clearfix"></div>
-
+                        <div class="slider" style="width:650px;height:400px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach(var x in Model)
+                                {
+                                <li><img src="@x.BlogImage" alt=""></li>
+                                @*<li><img src="~/web/images/img2.jpg" alt=""></li>
+                                <li><img src="~/web/images/img3.jpg" alt=""></li>
+                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
+                                }
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
         </div>
     </div>
-    <!--/header-->
-    <div class="single">
-        <div class="container">
-            <div class="col-md-8 single-main">
-                @foreach (var x in Model.Deger1)
-                {
-                    <div class="single-grid">
-                        <img src="@x.BlogImage" alt="" style=" margin-bottom:20px" />
-                        <a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a>
-                        <p>
-                            @x.Aciklama
-                        </p>
-                    </div>
-                    <br /><br />
-                }
-            </div>
-
-            <div class="col-md-4 side-content">
-                <div class="recent">
-                    <h3>Son Bloglar</h3>
-                    @foreach (var y in Model.Deger3)
-                    {
-                        <ul>
-                            <li><a href="/Blog/BlogDetay/@y.ID">@y.Baslik</a></li>
-                        </ul>
-                    }
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğuna Hoşgeldiniz!</h3>
+                    <p>Bu projeyi dönem projesi olarak, MVC5 üzerine kurulu dinamik bir web projesi geliştirdik. Gezmeyi sevenler olarak başta bize sonra herkese ilham olması için böyle bir proje oluşturmaya tercih ettik. Umarız bu proje size fikir olur. Umarız beğenirsiniz...</p>
                 </div>
-
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        @Html.Action("Partial4","Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
             </div>
-            <div class="clearfix"></div>
         </div>
     </div>
 </body>
 </html>
-
-
-
-
-
 
