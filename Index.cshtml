@@ -1,104 +1,28 @@
-﻿@using ISE309_ProjeOdev_B181200028_B181200039.Models.Sınıflar
+﻿@using ISE309_ProjeOdev_B181200039_B181200028.Models.Siniflar
 @model List<Blog>
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_deneme.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<!DOCTYPE HTML>
-<html>
-
-<body>
-    
-    <div class="header-banner">
-        <div class="wrap">
-            <div class="banner">
-                <div class="indent">
-                    <h2 class="indent-left margin-bot">Tatil & Seyahat Bloğum</h2>
-                    <div class="banner-left">
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/glass.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Restaurantlar</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/flight.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Uçuşlar</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/group.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Yapılacak Şeyler</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/key.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Araba Kiralama</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="header_bottom_right_images">
-
-                        <div class="slider" style="width:620px; height:360px;">
-                            <ul class="rslides" id="slider1">
-                                @foreach (var x in Model)
-                                {
-                                <li><img src="@x.BlogImage" alt=""></li>
-                                @*<li><img src="~/web/images/img2.jpg" alt=""></li>
-                                <li><img src="~/web/images/img3.jpg" alt=""></li>
-                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class"content">
-        <div class="wrap">
-            <div class="wrapper">
-                <div class="con-top">
-                    <h3>Tatil Seyahat Bloğuma Hoşgeldiniz!</h3>
-                    <p>
-                        Bu projeyi Aralık 2020 tarihinde başlatıp aralık 2020 tarihinde anasayfa düzenlemelerine
-                        getirdik. gezip gördüğüm yerieri silzerle kodlamasınıa tamamen kendim yaptığım MVC 5
-                        üzerine kurulu dinamik bir web projesi geliştirdim. Hem türkiyeden hem de yurtdışından
-                        gezip gördüğüm yerleri blog yazıları olarak paylaşma niyetindeyim. umarum ki yazdıklarımı
-                        beğenirsiniz, keyifli okumalar, sağlıklı günler.
-                    </p>
-                </div>
-                @Html.Action("Partial1", "_deneme_")
-                <div class="grids">
-                    <div class="box1">
-                        @Html.Action("Partial3", "_deneme_")
-                        @Html.Action("Partial4", "_deneme_")
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</body>
-</html>
+<h2>Blog Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach(var x in Model)
+    { 
+    <tr>
+        <td>@x.ID</td>
+        <td>@x.Baslik</td>
+        <td><a href="/Admin/BlogSil/@x.ID" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Admin/BlogGetir/@x.ID" class="btn btn-warning">Güncelle</a></td>
+    </tr>
+    }
+</table>
+<a href="/Admin/YeniBlog/" class="btn btn-primary">Yeni Blog</a>
 
