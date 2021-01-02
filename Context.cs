@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace ISE309_ProjeOdev_B181200028_B181200039.Models.Sınıflar
+namespace ISE309_ProjeOdev_B181200039_B181200028.Models.Siniflar
 {
-    public class Context: DbContext
+    public class Context : DbContext
     {
         public DbSet<Admin> Admins { get; set; }
         public DbSet<AdresBlog> AdresBlogs { get; set; }

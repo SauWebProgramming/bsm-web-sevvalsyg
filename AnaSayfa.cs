@@ -6,14 +6,11 @@ using System.Web;
 
 namespace ISE309_ProjeOdev_B181200039_B181200028.Models.Siniflar
 {
-    public class Yorumlar
+    public class AnaSayfa
     {
         [Key]
         public int ID { get; set; }
-        public string KullaniciAdi { get; set; }
-        public string Mail { get; set; }
-        public string Yorum { get; set; }
-        public int Blogid { get; set; }
-        public virtual Blog Blog { get; set; }
+        public string Baslik { get; set; }
+        public string Aciklama { get; set; }
     }
 }
