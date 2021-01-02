@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Bir derlemeyle ilgili Genel Bilgiler şu yollarla denetlenir:
 // denetlenir. Bir derlemeyle ilişkilendirilmiş bilgileri değiştirmek için bu
 // öznitelik değerlerini değiştirin.
-[assembly: AssemblyTitle("ISE309_ProjeOdev_B181200028_B181200039")]
+[assembly: AssemblyTitle("ISE309_ProjeOdev_B181200039_B181200028")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ISE309_ProjeOdev_B181200028_B181200039")]
+[assembly: AssemblyProduct("ISE309_ProjeOdev_B181200039_B181200028")]
 [assembly: AssemblyCopyright("Telif hakkı ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Bu proje COM'a açılmışsa aşağıdaki GUID typelib'in ID'si içindir
-[assembly: Guid("9e0b96a0-6ee3-4dbf-8d9c-05c2e90830a9")]
+[assembly: Guid("9d865443-d213-4240-93e3-4b47a36600db")]
 
 // Bir derlemenin sürüm bilgisi aşağıdaki dört değerden oluşur:
 //
