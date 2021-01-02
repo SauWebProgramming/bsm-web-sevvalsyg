@@ -1,102 +1,31 @@
-﻿@using ISE309_ProjeOdev_B181200039_B181200028.Models.Siniflar
-@model List<Blog>
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_TestLayout.cshtml";
+﻿@{
+    ViewBag.Title = "Home Page";
 }
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<body>
-    <div class="header-banner">
-        <div class="wrap">
-            <div class="banner">
-                <div class="indent">
-                    <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil & Seyahat Bloğu</h2>
-                    <div class="banner-left">
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/glass.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Restaurantlar</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/flight.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Uçuşlar</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/group.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Yapılacak Şeyler</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/key.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Araba Kiralama</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="header_bottom_right_images">
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
 
-                        <div class="slider" style="width:650px;height:400px;">
-                            <ul class="rslides" id="slider1">
-                                @foreach(var x in Model)
-                                {
-                                <li><img src="@x.BlogImage" alt=""></li>
-                                @*<li><img src="~/web/images/img2.jpg" alt=""></li>
-                                <li><img src="~/web/images/img3.jpg" alt=""></li>
-                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
-                                }
-                            </ul>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
-    <div class"content">
-        <div class="wrap">
-            <div class="wrapper">
-                <div class="con-top">
-                    <h3>Tatil Seyahat Bloğuna Hoşgeldiniz!</h3>
-                    <p>Bu projeyi dönem projesi olarak, MVC5 üzerine kurulu dinamik bir web projesi geliştirdik. Gezmeyi sevenler olarak başta bize sonra herkese ilham olması için böyle bir proje oluşturmaya tercih ettik. Umarız bu proje size fikir olur. Umarız beğenirsiniz...</p>
-                </div>
-                @Html.Action("Partial1","Default")
-                <div class="grids">
-                    <div class="box1">
-                        @Html.Action("Partial3","Default")
-                        @Html.Action("Partial4","Default")
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
-</body>
-</html>
-
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
